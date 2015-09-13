@@ -1,16 +1,70 @@
+.container{
+    width: 100%;
+    height: 100%;
+}
 #FormLogIn{
-    border: black 5px solid;
+    border: #5bc0de 5px solid;
     width: 50%;
     padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-right: 30px;
     background-color: #f8f8f8;
+    margin-top: 202px;
+    margin-left: 280px;
 }
-#logIn{
-    margin-top: 16%;
-    margin-left: 35%;
+#CuerpoPagina{
+    margin-top: 0%;
+    margin-left: 0%;
+    width: 100%;
+    height: 100%;
 }
 #btnIngresar{
     margin-left: 74%;
+}
+#ContenedorMesas{
+    border: 10px solid #5bc0de;
+    margin-top: 54px;
+    width: 82%;
+    height: 91%;
+}
+#ContenedorDetalle{
+    border: 10px solid #5bc0de;
+    margin-top: 54px;
+    height: 91%;
+    width: 252px;
+    margin-left: -10px;
+}
+#mesas{
+    display: inline-flex;
+}
+.Mesa{
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: inline-block;
+    background-color: darkgreen;
+    -webkit-border-radius: 63px 30px;
+}
+.contenedorTabla{
+    margin-top: 50px;
+}
+.referencia{
+    width: 15px;
+    height: 15px;
+     -webkit-border-radius: 30px 30px;
+}
+#refRojo{
+    background-color: red;
+}
+#refAmarillo{
+    background-color: yellow;
+}
+#refVerde{
+    background-color: darkgreen;    
+}
+.conRef{
+    padding-top: 10px;
 }

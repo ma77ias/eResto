@@ -16,30 +16,13 @@
         <link href="js/jqgrid/css/ui.jqgrid.css" rel="stylesheet" type="text/css"/>        
     </head>
     <body>
-        <div class="container">
+        <div class="contenedor">
             
             <nav id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="row">
-                    <!--<div class="col-md-10">
-                        <a href="#" class="btn btn-info" role="button">Mesas</a>
-                        <a href="#" class="btn btn-info" role="button">Personal</a>
-                        <a href="#" class="btn btn-info" role="button">Menu</a>
-                        <a href="#" class="btn btn-info" role="button">Listas de precios</a>
-                        <a href="#" class="btn btn-info" role="button">Clientes</a>
-                        <a href="#" class="btn btn-info" role="button">Ventas</a>
-                        <a href="#" class="btn btn-info" role="button">Gestion</a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="#" class="btn btn-info" role="button">Salir</a>                      
-                    </div> -->
-                    <div class="col-md-10">
-                        e-Resto
-                    </div>
-                    
-                </div>               
+                <div id="botonera" class="row"></div>               
             </nav>
-            
-            <div id="logIn" >
+                    
+            <div id="CuerpoPagina" >
                 <form id="FormLogIn">
                     <div id="" class="form-group">
                         <label>Usuario</label>
@@ -49,7 +32,7 @@
                         <label>Password</label>
                         <input type="text" class="form-control" id="">
                     </div>                    
-                    <button id="btnIngresar" type="submit" class="btn btn-default">Ingresar  </button>
+                    <button id="btnIngresar" type="text" class="btn btn-default">Ingresar</button>
                 </form>
             </div>
             

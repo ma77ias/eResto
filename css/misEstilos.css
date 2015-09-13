@@ -1,0 +1,16 @@
+#FormLogIn{
+    border: black 5px solid;
+    width: 50%;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    background-color: #f8f8f8;
+}
+#logIn{
+    margin-top: 16%;
+    margin-left: 35%;
+}
+#btnIngresar{
+    margin-left: 74%;
+}

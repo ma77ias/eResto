@@ -52,7 +52,6 @@
             <label>Comentario</label>
             <input type="text" class="form-control">
         </div>
-        <button id="btnAbrirMesa" type="text" class="btn btn-default">Abrir Mesa</button>
     </form>
 </div>
 <script src="js/Mesas.js"></script>

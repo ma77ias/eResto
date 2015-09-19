@@ -7,10 +7,15 @@ $(".mesa").dblclick(function(){
     }else{
      $("#admMesas").dialog({
         width: 600,
-        height: 415
-    });
-    }
-   
+        height: 415,
+		 buttons: {
+			"Abrir mesa": function() {
+				$("#admMesas").dialog("close");
+				mesaOcupada();
+			}
+		 }
+	 });
+	}
 });
 
 var mesaOcupada = function(){     
@@ -19,29 +24,63 @@ var mesaOcupada = function(){
     });
 };
 //Comandas-------------------------------------------------------------------------------------------------
-$("#TablaRecetasComanda").jqGrid({
-   	url:'controllers/mesasController.php?action=TraerRecetas',
-	datatype: "json",
-   	colNames:['Nombre','Precio', 'categoria', 'Estado'],
+jQuery("#TablaRecetasComanda").jqGrid({
+	datatype: "local",
+	height: 250,
+   	colNames:['numeroReceta','Nombre','Precio', 'categoria', 'Estado'],
    	colModel:[
-   		{name:'nombre',index:'id', width:55},
-   		{name:'valor',index:'invdate', width:90},
-   		{name:'categoria',index:'name asc, invdate', width:100},
-   		{name:'Estado',index:'tax', width:80, align:"right"}
+		{name:'numeroReceta',index:'numeroReceta', width:100},
+   		{name:'nombre',index:'id', width:200},
+   		{name:'valor',index:'valor', width:90},
+   		{name:'categoria',index:'categoria', width:100},
+   		{name:'Estado',index:'Estado', width:80, align:"right"}
    	],
-   	rowNum:10,
-   	rowList:[10,20,30],
-   	pager: '#TablaRecetasComanda_pagger',
-   	sortname: 'id',
-    viewrecords: true,
-    sortorder: "desc",
-    caption:"Materias prima",
-    multiselect: true,
-    multiboxonly: true,
-    gridComplete: function(){
-        alert("complete");
-    }
+   	caption: "Recetas"
 });
-$("#TablaRecetasComanda").jqGrid('navGrid','#TablaRecetasComanda_pagger',{edit:false,add:false,del:false});
-$("#TablaRecetasComanda").jqGrid('setGridWidth', '685');
-$("#TablaRecetasComanda").jqGrid('setGridHeight', '505');
+var mydata = [
+	{numeroReceta:"1",nombre:"Milanesas con papas fritas",valor:"150",categoria:"Rapidas",Estado:"note"},
+	{numeroReceta:"2",nombre:"Parrillada",valor:"500",categoria:"Compartir",Estado:"note"},
+	{numeroReceta:"3",nombre:"Fideos",valor:"100",categoria:"test",Estado:"note"},
+	{numeroReceta:"4",nombre:"Coca-Cola",valor:"40",categoria:"test",Estado:"note"},
+	{numeroReceta:"5",nombre:"Frutillas",valor:"35",categoria:"test",Estado:"note"},
+	{numeroReceta:"6",nombre:"Sushi",valor:"300",categoria:"test",Estado:"note"}
+		];
+for(var i=0;i<=mydata.length;i++)
+	jQuery("#TablaRecetasComanda").jqGrid('addRowData',i+1,mydata[i]);
+
+
+$("#agregarProductoComanda").click(function(){
+
+	var selectedRowId = $('#TablaRecetasComanda').jqGrid ('getGridParam', 'selrow');
+	var NombreProd = $('#TablaRecetasComanda').jqGrid('getCell', selectedRowId, 'nombre');
+	var PrecioProd = $('#TablaRecetasComanda').jqGrid('getCell', selectedRowId, 'valor');
+	var cantidad = $("#cantidadProdComanda").val();
+	
+	if(cantidad == ''){
+		alert("Debe seleccionar la cantidad");
+	}else{
+		var agregar = '<tr class="trTablaComanda">'+ 
+							'<td>'+cantidad+'</td>'+
+                            '<td>'+NombreProd+'</td>'+
+                            '<td>'+cantidad * PrecioProd+'</td>'+
+                        '</tr>';
+	
+		$("#comanda tr:last").after(agregar);
+	}
+
+	
+});
+
+$(".trTablaComanda td").click(function(){
+	alert("hola");
+});
+
+
+
+
+
+
+
+
+
+

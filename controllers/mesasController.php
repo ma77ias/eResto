@@ -21,16 +21,14 @@ switch($action){
 }
 
 function TraerRecetas($request){
-    $recetas = array(
-            'nombre' => 'Rojo',
-            'valor' => 'verde',
-            'categoria' => 'verde',
-            'Estado' => 'amarillo'
-            );
+	 $respuesta->rows['nombre']= 'a';
+	 $respuesta->rows['precio']= 'b';
+	 $respuesta->rows['categoria']= 'c';
+	 $respuesta->rows['estado']= 'c';
     
     sendResponse(array(
             "error" => false,
             "mensaje" => "Pedido Cargado",
-            "data" => $recetas
+            "data" => json_encode($recetas);
         ));
 }

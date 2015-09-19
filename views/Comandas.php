@@ -5,10 +5,10 @@
         <div class="col-md-7">
             <div class="row">
                 <div class="col-md-6">                    
-                    Cantidad:<input type="number" class="form-control" min="0" max="99"> 
+                    Cantidad:<input id="cantidadProdComanda" type="number" class="form-control" min="0" max="99"> 
                 </div>
                 <div class="col-md-6">
-                    <button id="" type="text" class="btn">Agregar</button>  
+                    <button id="agregarProductoComanda" type="text" class="btn">Agregar</button>  
                 </div>
             </div>
             <div id="panelDerechoTabla">
@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-5">     
             <div id="tablaComanda">
-                <table class="table" id="">  
+                <table id="comanda" class="table">  
                     <thead>
                         <tr>
                             <th class="thComanda">Cantidad</th>
@@ -29,7 +29,7 @@
                         </tr>
                     </thead>        
                     <tbody>
-                        <tr class="trTablaComanda">
+                       <!-- <tr class="trTablaComanda">
                             <td>1</td>
                             <td>Milanesa Napolitana</td>
                             <td>100</td>
@@ -48,13 +48,14 @@
                             <td>7</td>
                             <td>Guiso</td>
                             <td>123123123</td>
-                        </tr>                      
+                        </tr>  -->                    
                     </tbody>
                 </table>
             </div>
             <div id="">
                 <div id="botoneraComanda">
-                    <button id="btnIngresar" type="text" class="btn btn-default">Ingresar</button>  
+                    <button id="btnEnviarComanda" type="text" class="btn btn-default">Enviar</button> 
+					<button id="btnCerrarMesa" type="text" class="btn btn-default">Cerrar Mesa</button> 
                 </div>
             </div>
         </div>        

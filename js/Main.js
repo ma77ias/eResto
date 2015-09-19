@@ -14,6 +14,7 @@ $("#btnIngresar").click(function(event){
                     '</div>';
         $("#botonera").html(html);
         $("#FormLogIn").remove();
+  
        //Mesas
         $("#mesasLink").click(function(){
             $.get("views/mesas.php",function(data){
@@ -62,5 +63,7 @@ $("#btnIngresar").click(function(event){
                 $("#CuerpoPagina").html(data);
             });
         });
+    
+    event.preventDefault();
 });
 

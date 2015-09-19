@@ -1,6 +1,6 @@
 <div id="mesas">
     <div id="ContenedorMesas">
-        <div class="Mesa"></div>
+        <div id="mesaRoja" class="Mesa"></div>
         <div class="Mesa"></div>
         <div class="Mesa"></div>
         <div class="Mesa"></div>
@@ -34,7 +34,6 @@
         </div>
     </div>
 </div>
-
 <div id="admMesas" title="Administracion de mesa">  
     <form id="FormAdmMesas">
         <div id="MesaPersona" class="form-group">

@@ -38,6 +38,9 @@
 #mesas{
     display: inline-flex;
 }
+#mesaRoja{
+    background-color: red;
+}
 .Mesa{
     border: 1px solid;
     width: 100px;
@@ -67,4 +70,19 @@
 }
 .conRef{
     padding-top: 10px;
+}
+#pantallaComanda{
+    margin-top: 50px;
+}
+.thComanda{
+    width:  40px;
+}
+#tablaComanda{
+    height: 545px;
+}
+.trTablaComanda{
+    height: 0px;;
+}
+#panelDerechoBotonera{
+
 }

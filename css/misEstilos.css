@@ -49,7 +49,7 @@
     margin-top: 15px;
     display: inline-block;
     background-color: darkgreen;
-    -webkit-border-radius: 63px 30px;
+    /*-webkit-border-radius: 63px 30px;*/
 }
 .contenedorTabla{
     margin-top: 50px;
@@ -84,6 +84,12 @@
     height: 0px;
 	background-color: yellow;
 }
-.trComandasSeleccionar{
+.trComandasSelecciona{
 	background-color: lightblue;
+}
+#FormasDePagoElegidas{
+    height: 512px;
+}
+#ContenedorCliente{
+    margin-top: 60px;
 }

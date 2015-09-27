@@ -1,10 +1,6 @@
-var heightDerecho = 205;
-var widthDerecho = 655;
-
-//Materia prima----------------------------------------------------------------------------------------------
-$("#MenuMateriaPrima").jqGrid({
-   	url:'',
-	datatype: "json",
+//Menu----------------------------------------------------------------------------------------------
+$("#Menu").jqGrid({
+	datatype: "local",
    	colNames:['Nombre','Precio', 'Stock', 'Categoria'],
    	colModel:[
    		{name:'nombre',index:'id', width:55},
@@ -12,68 +8,20 @@ $("#MenuMateriaPrima").jqGrid({
    		{name:'stock',index:'name asc, invdate', width:100},
    		{name:'categoria',index:'amount', width:80, align:"right"}
    	],
-   	rowNum:10,
-   	rowList:[10,20,30],
-   	pager: '#MenuMateriaPrima_pagger',
-   	sortname: 'id',
-    viewrecords: true,
-    sortorder: "desc",
-    caption:"Materias prima",
-    gridComplete: function(){
-        alert("complete");
-    }
+    caption:"Recetas"
 });
-$("#MenuMateriaPrima").jqGrid('navGrid','#MenuMateriaPrima_pagger',{edit:false,add:false,del:false});
-$("#MenuMateriaPrima").jqGrid('setGridWidth', '685');
-$("#MenuMateriaPrima").jqGrid('setGridHeight', '505');
+$("#Menu").jqGrid('navGrid','#Menu_pagger',{edit:false,add:false,del:false});
+$("#Menu").jqGrid('setGridWidth', '1346');
+$("#Menu").jqGrid('setGridHeight', '505');
 
-//Receta----------------------------------------------------------------------------------------------
-$("#MenuReceta").jqGrid({
-   	url:'',
-	datatype: "json",
-   	colNames:['Nombre','Valor', 'Categoria','Estado'],
-   	colModel:[
-   		{name:'nombre',index:'id', width:55},
-   		{name:'valor',index:'invdate', width:90},
-   		{name:'categoria',index:'name asc, invdate', width:100},
-   		{name:'Estado',index:'tax', width:80, align:"right"}
-   	],
-   	rowNum:10,
-   	rowList:[10,20,30],
-   	pager: '#MenuReceta_pagger',
-   	sortname: 'id',
-    viewrecords: true,
-    sortorder: "desc",
-    caption:"Recetas",
-    gridComplete: function(){
-        alert("complete");
-    }
-});
-$("#MenuReceta").jqGrid('navGrid','#MenuReceta_pagger',{edit:false,add:false,del:false});
-$("#MenuReceta").jqGrid('setGridWidth', widthDerecho);
-$("#MenuReceta").jqGrid('setGridHeight', heightDerecho);
-//Receta - Materia Prima---------------------------------------------------------------------------------------------
-$("#MenuRecetaMateriaPrima").jqGrid({
-   	url:'',
-	datatype: "json",
-   	colNames:['Nombre','Precio', 'Stock', 'Categoria'],
-   	colModel:[
-   		{name:'nombre',index:'id', width:55},
-   		{name:'precio',index:'invdate', width:90},
-   		{name:'stock',index:'name asc, invdate', width:100},
-   		{name:'categoria',index:'amount', width:80, align:"right"}
-   	],
-   	rowNum:10,
-   	rowList:[10,20,30],
-   	pager: '#MenuRecetaMateriaPrima_pagger',
-   	sortname: 'id',
-    viewrecords: true,
-    sortorder: "desc",
-    caption:"Composicion Receta",
-    gridComplete: function(){
-        alert("complete");
-    }
-});
-$("#MenuRecetaMateriaPrima").jqGrid('navGrid','#MenuRecetaMateriaPrima_pagger',{edit:false,add:false,del:false});
-$("#MenuRecetaMateriaPrima").jqGrid('setGridWidth', widthDerecho);
-$("#MenuRecetaMateriaPrima").jqGrid('setGridHeight', heightDerecho);
+var mydata = [
+	{nombre:"Milanesas con Papas fritas",precio:"150",stock:"150",categoria:"Rapidas"},
+    {nombre:"Parrillada",precio:"500",stock:"150",categoria:"Compartir"},
+    {nombre:"Fideos",precio:"100",stock:"150",categoria:"Rapidas"},
+    {nombre:"Coca-Cola",precio:"40",stock:"150",categoria:"Bebidas"},
+    {nombre:"Frutillas",precio:"100",stock:"150",categoria:"Postre"},
+    {nombre:"Sushi",precio:"300",stock:"150",categoria:"note"}
+		];
+for(var i=0;i<=mydata.length;i++)
+	jQuery("#Menu").jqGrid('addRowData',i+1,mydata[i]);
+

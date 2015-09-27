@@ -93,6 +93,7 @@ var agregarControladorEvento = function(){
 $("#btnEnviarComanda").click(function(){
      
     $('#comanda tr').each(function () {
+<<<<<<< HEAD
 
         var pk = $(this).find("td").eq(4).children();
 
@@ -134,6 +135,30 @@ $("#addMesa").click(function(){
 		 }
 	 });
 
+=======
+
+        var pk = $(this).find("td").eq(4).children();
+
+        alert(pk);
+        
+        if( $(pk).attr('checked') ) {
+            alert("check");
+        }
+        
+    });
+    
+    
+});
+
+$("#btnCerrarMesa").click(function(){    
+    $.get("views/formasDePago.php", function(data){
+        $("#tablaDerecha").html(data);
+        
+        var ticket = '<button id="btnImprimirTicket" type="text" class="btn btn-default">Imprimir Ticket</button>';
+        
+        $("#botoneraComanda").html(ticket);
+    });
+>>>>>>> origin/master
 });
 
 

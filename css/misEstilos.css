@@ -89,6 +89,7 @@
 }
 #FormasDePagoElegidas{
     height: 512px;
+<<<<<<< HEAD
 }
 #ContenedorCliente{
     margin-top: 60px;
@@ -105,4 +106,12 @@
 #botoneraMesas{
     margin-top: 54px;
     padding-right: 10px;
+=======
+<<<<<<< HEAD
+}
+#ContenedorCliente{
+    margin-top: 60px;
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 }

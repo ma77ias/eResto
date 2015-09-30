@@ -93,6 +93,10 @@ var agregarControladorEvento = function(){
 $("#btnEnviarComanda").click(function(){
      
     $('#comanda tr').each(function () {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 
         var pk = $(this).find("td").eq(4).children();
 
@@ -105,6 +109,7 @@ $("#btnEnviarComanda").click(function(){
     });
     
     
+<<<<<<< HEAD
 });
 
 $("#btnCerrarMesa").click(function(){    
@@ -139,6 +144,61 @@ $("#addMesa").click(function(){
 		 }
 	 });
 
+=======
+});
+
+$("#btnCerrarMesa").click(function(){    
+    $.get("views/formasDePago.php", function(data){
+        $("#tablaDerecha").html(data);
+        
+        var ticket = '<button id="btnImprimirTicket" type="text" class="btn btn-default">Imprimir Ticket</button>';
+        
+        $("#botoneraComanda").html(ticket);
+    });
+});
+
+$("#addMesa").click(function(){
+  
+    $("#cubiertosMesa").dialog({
+        width: 300,
+        height: 300,
+		 buttons: {
+			"Agregar": function() {
+                
+                var mesa = '<div class="Mesa"><label>Mesa 17</label><label>Cubiertos: '+ $("#CantCubiertos").val() +'</label></div>';
+    
+                $("#ContenedorMesas").append(mesa);
+				$("#cubiertosMesa").dialog("close");
+			
+			}
+		 }
+	 });
+
+=======
+
+        var pk = $(this).find("td").eq(4).children();
+
+        alert(pk);
+        
+        if( $(pk).attr('checked') ) {
+            alert("check");
+        }
+        
+    });
+    
+    
+});
+
+$("#btnCerrarMesa").click(function(){    
+    $.get("views/formasDePago.php", function(data){
+        $("#tablaDerecha").html(data);
+        
+        var ticket = '<button id="btnImprimirTicket" type="text" class="btn btn-default">Imprimir Ticket</button>';
+        
+        $("#botoneraComanda").html(ticket);
+    });
+>>>>>>> origin/master
+>>>>>>> origin/master
 });
 
 

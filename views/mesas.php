@@ -63,7 +63,11 @@
     <form id="FormCubiertosMesa">
         <div id="cubiertosCant" class="form-group">
             <label>Cantidad de cubiertos</label>
+<<<<<<< HEAD
             <input id="CantCubiertos" type="number" min="1" max="10" class="form-control">
+=======
+            <input id="CantCubiertos" type="text" class="form-control">
+>>>>>>> origin/master
         </div>
     </form>
 </div>

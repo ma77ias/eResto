@@ -26,11 +26,11 @@
                 <form id="FormLogIn">
                     <div id="" class="form-group">
                         <label>Usuario</label>
-                        <input type="text" class="form-control">
+                        <input id="inputLogin" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Password</label>
-                        <input type="text" class="form-control" id="">
+                        <input id="inputPass" type="text" class="form-control" id="">
                     </div>                    
                     <button id="btnIngresar" type="text" class="btn btn-default">Ingresar</button>
                 </form>

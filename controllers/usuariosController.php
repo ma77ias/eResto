@@ -9,11 +9,8 @@ function sendResponse($response){
 $request = new Request();
 $action = $request->action;
 switch($action){   
-    case "TraerRecetas":
-        TraerRecetas($request);
-        break;   
-    case "agregarMesa":
-        agregarMesa($request);
+    case "validarUsuario":
+        validarUsuario($request);
         break;   
     default:
         sendResponse(array(
@@ -23,20 +20,20 @@ switch($action){
         break;
 }
 
-function TraerRecetas($request){};
-
-function agregarMesa($request){    
-    require("../data/MesasData.php");
+function validarUsuario($request){
     
-    $MesasData = new MesasData();
+    require("../data/UsuarioData.php");
     
-    $Cubiertos = $request->Cubiertos;
+    $UsuarioData = new UsuarioData();
     
-    if($cubiertosAgregar = $MesasData->Agregar($Cubiertos)){
+    $login = $request->Login;
+    $pass = $request->Pass;    
+    
+    if($usuario = $UsuarioData->validar($login, $pass)){
         sendResponse(array(
             "error" => false,
-            "mensaje" => "Mesa agregada",
-            "data" => $cubiertosAgregar
+            "mensaje" => "Usuario validado",
+            "data" => $usuario
         ));
     }else{
         sendResponse(array(
@@ -44,4 +41,6 @@ function agregarMesa($request){
             "mensaje" => "Error..."
         ));
     }
+    
+    
 }
